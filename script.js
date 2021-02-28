@@ -1,7 +1,7 @@
 //Using moment.js to get current date and time 
 var displayCurrentDate = moment().format("dddd, MMMM Do");
 $("#currentDay").text(displayCurrentDate);
-
+//loads input items from storage
 window.onload = function() { 
 document.getElementById("myInput").style.display = "none";//set textbox to not visiable
 var x = localStorage.getItem("Text");//Load storage
@@ -20,7 +20,7 @@ if(time < 12) {
 	$("timeRow9").addClass = "past";
 }
 }
-
+// Input fields
 function myFunction() 
 {  
 	var x = document.getElementById("myInput");
@@ -30,7 +30,7 @@ function myFunction()
 		x.style.display = "block";
 	} 
 }
-
+// Sets input items to local storage
 function myFunction1() 
 {
 	var x = document.getElementById("myInput").value;
