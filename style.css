@@ -32,7 +32,7 @@ div i {
 }
 
 .time-block{
-  text-align: center;
+  text-align: left;
   border: 1px solid black;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -59,11 +59,11 @@ div i {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #ff6961 !important;
   color: white;
 }
 
-.future {
+.future, .time-block {
   background-color: #77dd77;
   color: white;
 }

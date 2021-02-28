@@ -1,22 +1,42 @@
-// Using moment.js to get current date and time 
+//Using moment.js to get current date and time 
 var displayCurrentDate = moment().format("dddd, MMMM Do");
 $("#currentDay").text(displayCurrentDate);
 
-// Change timeblocks based on time of day
-var currentTime = moment();
+window.onload = function() { 
+document.getElementById("myInput").style.display = "none";//set textbox to not visiable
+var x = localStorage.getItem("Text");//Load storage
+document.getElementById("myInput").value = x;//Value of local storage
 
-// 9a block
-var changeBlock9a = function(){
-    if currentTime > moment("08:59:59").format("hh:mm:ss") && <= moment("9:59:59").format("hh:mm:ss");
-    $("#timeRow9").addClass("present");
-} else if {
-    currentTime <= moment("08:59:59").format("hh:mm:ss"); 
-    $("#timeRow9").addClass("past");
-} else {
-    $("#timeRow9").addClass("future");
+//time
+var myTime = new Date();
+var time = myTime.getHours();
+if(time>12)
+{
+	time-="12";
 }
-return;
 
+if(time < 12) {
 
+	$("timeRow9").addClass = "past";
+}
+}
 
-// document.getElementsByClassName("col-9").classname = "present"
+function myFunction() 
+{  
+	var x = document.getElementById("myInput");
+	x.style.color = "black";
+	if(x.style.display === "none")
+	{
+		x.style.display = "block";
+	} 
+}
+
+function myFunction1() 
+{
+	var x = document.getElementById("myInput").value;
+	
+	localStorage.setItem("Text", x);
+	var a = localStorage.getItem("Text");
+	
+}
+
